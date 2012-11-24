@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Fractal Trees - An HTML5 Canvas Fractal Tree Generator</title>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Include css file. -->
+    <link type="text/css" href="css/FractalTrees.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jcanvas.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Include javascript class. -->
+    <script type="text/javascript" src="js/FractalTrees.class.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        // Instantiate and run the FractalTrees javascript object.
+        ft = new FractalTrees();
+        // Bind the ft.draw() function to the "Draw Tree" button click event.
+        $('#ftDrawTreeBtn').click(function() {
+          ft.drawTree();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="fractal-trees">
+      <!-- // title -->
+      <div class="row">
+        <div class="span14">
+          <div class="row">
+            <div class="span14">
+              <h3><a href="index.html">Fractal Trees</a></h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span14">
+              <i>An HTML5 canvas fractal tree generator.</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span4">
+          <br />
+          <!-- tree options -->
+          <div class="row">
+            <div class="span4">
+              <h4>Tree Options</h4>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="span2">
+              <div class="ft-label">Trunk Length</div>:
+            </div>
+            <div class="span2">
+              <select name="trunkLength" id="ftTrunkLength" class="ft-select">
+                <option value="20">Very Short</option>
+                <option value="50">Short</option>
+                <option value="80" selected="selected">Medium</option>
+                <option value="110">Tall</option>
+                <option value="140">Very Tall</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span2">
+              <div class="ft-label">Branch Length</div>:
+            </div>
+            <div class="span2">
+              <select name="branchLength" id="ftBranchLength" class="ft-select">
+                <option value="60">Very Short</option>
+                <option value="80">Short</option>
+                <option value="100" selected="selected">Medium</option>
+                <option value="120">Long</option>
+                <option value="140">Very Long</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span2">
+              <div class="ft-label">Branch Angle</div>:
+            </div>
+            <div class="span2">
+              <select name="branchAngle" id="ftBranchAngle" class="ft-select">
+                <option value="10">Very Narrow</option>
+                <option value="15">Narrow</option>
+                <option value="20" selected="selected">Medium</option>
+                <option value="30">Wide</option>
+                <option value="40">Very Wide</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span2">
+              <div class="ft-label">Leaf Size</div>:
+            </div>
+            <div class="span2">
+              <select name="leafSize" id="ftLeafSize" class="ft-select">
+                <option value="2">Very Small</option>
+                <option value="4">Small</option>
+                <option value="8" selected="selected">Medium</option>
+                <option value="10">Large</option>
+                <option value="14">Very Large</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span2">
+              <div class="ft-label">Tree Age</div>:
+            </div>
+            <div class="span2">
+              <select name="treeAge" id="ftTreeAge" class="ft-select">
+                <option value="2">2 Years</option>
+                <option value="4">4 Years</option>
+                <option value="6">6 Years</option>
+                <option value="8" selected="selected">8 Years</option>
+                <option value="10">10 Years</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span2">
+              <div class="ft-label">Draw Speed</div>:
+            </div>
+            <div class="span2">
+              <select name="drawSpeed" id="ftDrawSpeed" class="ft-select">
+                <option value="2">Very Slow</option>
+                <option value="4">Slow</option>
+                <option value="6">Medium</option>
+                <option value="8" selected="selected">Fast</option>
+                <option value="9">Very Fast</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span2"></div>
+            <div class="span2"><br />
+              <div id="ftButtonBar">
+                <!-- draw tree button -->
+                <button class="btn btn-success" id="ftDrawTreeBtn">Draw Tree</button>
+              </div>
+              <div id="ftLoadingBar">
+                <!-- loading / running icon (spinny gif) -->
+                <img src="img/loading.gif" title="Drawing tree..." border="0" />
+              </div>
+            </div>
+          </div>
+          <!-- // tree options -->
+        </div>
+        <div class="span10">
+          <!-- HTML5 fractal tree canvas tag. -->
+          <canvas id="ftFractalTree" width="740" height="480">Your web browser does not support HTML5.  Your browser is bad, and you should feel bad.</canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

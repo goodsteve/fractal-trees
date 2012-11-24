@@ -1,0 +1,7 @@
+#fractal-trees {margin: 20px;}
+#fractal-trees a {color: #417c41;}
+#fractal-trees h4 {color: #417c41;}
+#fractal-trees .ft-label {padding-top: 4px; display: inline-block; font-weight: bold;}
+#fractal-trees .ft-select {width: 140px;}
+#ftLoadingBar {display: none;}
+#ftFractalTree {background-color: #ebf1f1; border: 1px solid #0b5626; margin-left: 20px; margin-top: 20px;}
