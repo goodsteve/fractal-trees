@@ -27,8 +27,8 @@ function FractalTrees() {
   this.deg2rad              = Math.PI / 180.0; // Converts a degree to its radian number.
   // Canvas dimensions
   this.canvas               = {};
-  this.canvas.height        = 480;
-  this.canvas.width         = 740;
+  this.canvas.height        = 460;
+  this.canvas.width         = 600;
   // HTML tag id's
   this.html                 = {};
   this.html.branchAngleId   = 'ftBranchAngle';
@@ -58,7 +58,7 @@ function FractalTrees() {
   // Tree positions
   this.tree.pos         = {};
   this.tree.pos.x       = (this.canvas.width / 2);
-  this.tree.pos.y       = (this.canvas.height - 40);
+  this.tree.pos.y       = (this.canvas.height - 20);
   this.tree.pos.yTree   = (this.tree.pos.y - this.tree.params.trunkLength);
   // Object status
   this.isDrawing    = false;
