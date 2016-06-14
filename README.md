@@ -18,13 +18,6 @@ http://twitter.github.com/bootstrap/index.html
 
 
 
-Demo
-=========
-
-http://goodsteve.co/fractal-trees/
-
-
-
 Fractal geometry and Chaos Theory
 =================================
 
